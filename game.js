@@ -22,6 +22,17 @@ let home_btn = document.getElementById("home").addEventListener("click", ()=>{
     window.location.href = "index.html";
 });
 
+let aboutBtn = document.getElementById("aboutBtn");
+let aboutModel = document.getElementById("aboutModal");
+let closeAbout  = document.getElementById("closeAbout");
+
+aboutBtn.addEventListener("click", () =>{
+    aboutModel.style.display = "flex";
+});
+closeAbout.addEventListener("click", () => {
+    aboutModel.style.display = "none";
+});
+
 
 
 //Help element
