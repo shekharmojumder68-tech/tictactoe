@@ -78,6 +78,24 @@ body{
     margin-right: 100%;
 
 }
+#home{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #2b1f03;
+}
+#help{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;  
+    color: #2b1f03;
+}
+#aboutBtn{
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #2b1f03;
+}
 #menu button{
     margin-top: 25%;
     font-weight: 700;
@@ -150,15 +168,15 @@ body{
   .about-box button {
     margin-top: 15px;
   }
-#muteBtn{
+ 
+
+#musicbox i{
+    font-size: 2rem;
+}
+#musicbox button{
     margin-left: 80%;
     margin-top : 80px;
     background-color: transparent;            /* icon color */
     border: none; 
     font-size: 1.3rem; 
 }
-  
-
-
-
-
