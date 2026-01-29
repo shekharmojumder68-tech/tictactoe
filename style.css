@@ -89,17 +89,20 @@ body{
     border: none;
     font-size: 1.2rem;  
     color: #2b1f03;
+   
 }
 #aboutBtn{
     background-color: transparent;
     border: none;
     font-size: 1.2rem;
     color: #2b1f03;
+   
 }
 #menu button{
     margin-top: 25%;
     font-weight: 700;
     margin-left: 25px;
+    cursor: pointer;
 }
 .help{
     height:25px ;
@@ -178,4 +181,5 @@ body{
     background-color: transparent;            /* icon color */
     border: none; 
     font-size: 1.3rem; 
+    cursor: pointer;
 }
