@@ -121,10 +121,12 @@ boxes.forEach((box) =>{
   if(turn0){
 
     box.innerText = "X";
+   box.style.color = "#c3cd17";
     turn0 =false;
   }
   else{
     box.innerText = "O";
+   box.style.color = "green";
     turn0=true;
 }
 box.disabled=true;
