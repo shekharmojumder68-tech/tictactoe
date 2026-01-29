@@ -9,7 +9,26 @@ let musicsorce = document.querySelector("#music");
  let container = document.querySelector(".container");
 let startbtn = document.querySelector("#start");
 
+//Mute Button
+let muteBtn = document.getElementById("muteBtn");
+muteBtn.volume = 0;
+let isMute = false;
 
+muteBtn.addEvenListener("click",() =>{
+ if(!isMute){
+  bgmusic.muted = true;
+  musicsorce.muted = true;
+  document.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> Mute';
+ }
+ else{
+  bgmusic.muted = false;
+  musicsorce.muted = false;
+  bgmusic.play();
+  musicsorce.play();
+  document.innerHTML = '<i class="fa-solid fa-music"></i> Sound';
+ }
+ isMute = !isMute;
+});
 
 let bgMusic = document.getElementById("bg-music");
 bgMusic.volume = 0.4;
