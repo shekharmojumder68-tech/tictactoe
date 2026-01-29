@@ -5,35 +5,10 @@ let pmsg = document.querySelector("#msg");
 let msgcontainer = document.querySelector(".msg-container");
 let musicsorce = document.querySelector("#music");
 
+
  //Start button
  let container = document.querySelector(".container");
 let startbtn = document.querySelector("#start");
-
-//Mute Button
-let muteBtn = document.getElementById("muteBtn");
-muteBtn.volume = 0;
-let isMute = false;
-
-muteBtn.addEvenListener("click",() =>{
- if(!isMute){
-  bgmusic.muted = true;
-  musicsorce.muted = true;
-  document.innerHTML = '<i class="fa-solid fa-volume-xmark"></i> Mute';
- }
- else{
-  bgmusic.muted = false;
-  musicsorce.muted = false;
-  bgmusic.play();
-  musicsorce.play();
-  document.innerHTML = '<i class="fa-solid fa-music"></i> Sound';
- }
- isMute = !isMute;
-});
-
-let bgMusic = document.getElementById("bg-music");
-bgMusic.volume = 0.4;
-bgMusic.loop = true;
-
 
 //Home button
 
@@ -68,8 +43,38 @@ closebtn.addEventListener("click", ()=>{
     help_box.style.display = "";
 });
 
+//Music setting
+
+//Background Music
+
+let bgMusic = document.getElementById("bg-music");
+bgMusic.volume = 0.4;
+bgMusic.loop = true;
+
+
+let muteBtn = document.getElementById("muteBtn");
+muteBtn.volume = 0;
+let isMute = false;
 
 //play music only once
+muteBtn.addEventListener("click",() => {
+  if(!isMute){
+    musicsorce.muted=true;
+    bgMusic.muted = true;
+    muteBtn.innerHTML =
+    '<i class="fa-solid fa-volume-xmark"></i> Mute';
+  }
+  else{
+    bgMusic.muted = false;
+    musicsorce.muted = false;
+    musicsorce.play();
+    bgMusic.play();
+    muteBtn.innerHTML = '<i class="fa-solid fa-music"></i> Sound';
+  }
+ isMute=!isMute;
+ });
+
+ 
 bgMusic.loop= true;
 bgMusic.volume = 0.2;
 
@@ -109,6 +114,7 @@ boxes.forEach((box) =>{
   box.addEventListener("click", () => {
 
     //play music on first move only
+
      musicsorce.currentTime =0;
      musicsorce.play().catch(()=>{});
 
