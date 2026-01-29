@@ -150,6 +150,13 @@ body{
   .about-box button {
     margin-top: 15px;
   }
+#muteBtn{
+    margin-left: 80%;
+    margin-top : 80px;
+    background-color: transparent;            /* icon color */
+    border: none; 
+    font-size: 1.3rem; 
+}
   
 
 
